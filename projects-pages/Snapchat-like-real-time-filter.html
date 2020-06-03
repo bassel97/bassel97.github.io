@@ -60,8 +60,56 @@
 
 				<h2>Project Description</h2>
 				<p>
+					In this project we wanted to create a realtime filter like <b>Snapchat</b> with a sample filter.
+					<br>
+					We have chose <b>Marvel &trade;</b> <i>Ghost Rider</i> character, with fire effect when the user
+					opens his mouth.
 				</p>
 
+				<h2>APIs and dependencies</h2>
+				<p>
+					<span class="image right"><img src="../images/snapchat-filters/OpenCV_Logo.png" alt="" /></span>
+					<span class="image right"><img src="../images/snapchat-filters/unity-logo.png" alt="" /></span>
+					We have chosen <b>OpenCV</b> to get array of facial landmarks points for each face.
+					<br>
+					We developed the program using <b>C++</b> and built it into a dynamic library to be used by
+					<b>Unity 3D</b>.
+					<br>
+					Unity 3D calls the dynamic library functions to get the facial landmarks and use
+					this data to calculate the skull position, rotation and mouth state (open/close).
+				</p>
+
+				<h2>The approach</h2>
+				<p>
+					OpenCV provides a function to get facial landmarks to each face as an array of 68 elements.
+					This landmarks are in 2D space as the image. Each group of points are for a cretain facial feature.
+					<br>
+					<B>Index:</B>
+					<br>
+					0-16: Chin
+					<br>
+					17-26: Eye brows
+					<br>
+					27-35: Nose
+					<br>
+					36-47: Eyes
+					<br>
+					48-76: Mouth
+				</p>
+				<span class="image fir"><img src="../images/snapchat-filters/facial_landmarks.jpg" alt="" /></span>
+				<p>
+					Using this info about the face, rotation of the face looking (left/right) could be calcualted as a
+					ratio between the nose and the cheek on each side. Or simple a ratio in the distances:<br>
+					<b>distance(34,3):distance(34,15).</b>
+				</p>
+
+				<h2>Post Processing</h2>
+				<p>
+					Finally a post processing shader was created for the toon effect to mimic comic books.
+					<br>
+					The shader first discritize the color pixel value into one of countable values then
+					apply edge detection shader on the discritized image.
+				</p>
 
 
 				<ul class="actions">
