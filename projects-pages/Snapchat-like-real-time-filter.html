@@ -1,141 +1,158 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Snapchat like real-time filter</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="../assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+        Projects | Snapchat like real-time filter
+    </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick-theme.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/aos.css" />
+    <link rel="stylesheet" href="../assets/css/plugins/feature.css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
-<body class="is-preload">
+<body class="template-color-1 spybody" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="150">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <main class="main-page-wrapper">
+        <!-- Modal Blog Body area Start -->
+        <div class="modal fade show" id="kinectMotionCaptureProject" tabindex="-1" role="dialog"
+            style="padding-right: 17px; display: block;" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+                <div class="modal-content">
+                    <div class="content">
+                        <a class="read-more-button" href="../index.html#projects"><i class="feather-arrow-left"></i>
+                            Back to Projects</a>
+                    </div>
+                    <br>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="../projects.html" class="logo">Snapchat like real-time filter</a>
-		</header>
+                    <!-- End of .modal-header -->
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="../projects.html">Back to projects</a></li>
-				<li class="active"><a href="#">Project</a></li>
-			</ul>
+                    <div class="modal-body">
+                        <!-- <img src="assets/images/blog/blog-big-01.jpg" alt="news modal"
+                            class="img-fluid modal-feat-img" /> -->
+                        <div class="news-details">
+                            <span class="date">November, 2018</span>
+                            <h2 class="title">SNAPCHAT LIKE REAL-TIME FILTER</h2>
+                            <p>
+                                Created for image processing course.
+                            </p>
 
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/bassel-mostafa/" class="icon brands fa-linkedin-in"><span
-							class="label">LinkedIn</span></a></li>
+                            <div
+                                style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/RI9a7RI5E5E"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                    alt="news modal" class="img-fluid modal-feat-img" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <h4>DESCRIPTION</h4>
+                            <p>
+                                In this project we wanted to create a realtime filter like Snapchat with a sample
+                                filter.
+                                We have chose Marvel ™ Ghost Rider character, with fire effect when the user opens his
+                                mouth.
+                            </p>
 
-				<li><a href="https://github.com/bassel97" class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
+                            <h4>APIS AND DEPENDENCIES</h4>
+                            <p>
+                                We have chosen OpenCV to get array of facial landmarks points for each face.
+                                We developed the program using C++ and built it into a dynamic library to be used by
+                                Unity
+                                3D.
+                            </p>
+                            <p>
+                                Unity 3D calls the dynamic library functions to get the facial landmarks and use this
+                                data
+                                to calculate the skull position, rotation and mouth state (open/close).
+                            </p>
 
-				<li><a href="https://www.youtube.com/channel/UClCG8xMDzrleJYhlrBLfpqg"
-						class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                            <h4>THE APPROACH</h4>
+                            <p>
+                                OpenCV provides a function to get facial landmarks to each face as an array of 68
+                                elements.
+                                This landmarks are in 2D space as the image. Each group of points are for a cretain
+                                facial
+                                feature.
+                            </p>
+                            <p>
+                            <h5>Index:</h5>
+                            0-16: Chin<br>
+                            17-26: Eye brows<br>
+                            27-35: Nose<br>
+                            36-47: Eyes<br>
+                            48-76: Mouth
+                            </p>
 
-				<li><a href="https://twitter.com/BasselMks" class="icon brands fa-twitter"><span
-							class="label">Twitter</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Post -->
-			<section class="post">
-				<header class="major">
-					<h1>Snapchat like real-time filter</h1>
-					<p>Created for <b>image processing</b> course.</p>
-				</header>
-
-				<span class="image fit">
-					<iframe class="image fit" width="560" height="680" src="https://www.youtube.com/embed/RI9a7RI5E5E"
-						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</span>
-
-				<h2>Project Description</h2>
-				<p>
-					In this project we wanted to create a realtime filter like <b>Snapchat</b> with a sample filter.
-					<br>
-					We have chose <b>Marvel &trade;</b> <i>Ghost Rider</i> character, with fire effect when the user
-					opens his mouth.
-				</p>
-
-				<h2>APIs and dependencies</h2>
-				<p>
-					<span class="image right"><img src="../images/snapchat-filters/OpenCV_Logo.png" alt="" /></span>
-					<span class="image right"><img src="../images/snapchat-filters/unity-logo.png" alt="" /></span>
-					We have chosen <b>OpenCV</b> to get array of facial landmarks points for each face.
-					<br>
-					We developed the program using <b>C++</b> and built it into a dynamic library to be used by
-					<b>Unity 3D</b>.
-					<br>
-					Unity 3D calls the dynamic library functions to get the facial landmarks and use
-					this data to calculate the skull position, rotation and mouth state (open/close).
-				</p>
-
-				<h2>The approach</h2>
-				<p>
-					OpenCV provides a function to get facial landmarks to each face as an array of 68 elements.
-					This landmarks are in 2D space as the image. Each group of points are for a cretain facial feature.
-					<br>
-					<B>Index:</B>
-					<br>
-					0-16: Chin
-					<br>
-					17-26: Eye brows
-					<br>
-					27-35: Nose
-					<br>
-					36-47: Eyes
-					<br>
-					48-76: Mouth
-				</p>
-				<span class="image fir"><img src="../images/snapchat-filters/facial_landmarks.jpg" alt="" /></span>
-				<p>
-					Using this info about the face, rotation of the face looking (left/right) could be calcualted as a
-					ratio between the nose and the cheek on each side. Or simple a ratio in the distances:<br>
-					<b>distance(34,3):distance(34,15).</b>
-				</p>
-
-				<h2>Post Processing</h2>
-				<p>
-					Finally a post processing shader was created for the toon effect to mimic comic books.
-					<br>
-					The shader first discritize the color pixel value into one of countable values then
-					apply edge detection shader on the discritized image.
-				</p>
+                            <img src="../assets/images/projects/snapchat-filters/facial_landmarks.jpg" alt="news modal"
+                                class="img-fluid modal-feat-img">
 
 
-				<ul class="actions">
-					<li><a href="../projects.html" class="button">Back to projects</a></li>
-				</ul>
+                            <p>
+                                Using this info about the face, rotation of the face looking (left/right) could be
+                                calcualted as a ratio between the nose and the cheek on each side. Or simple a ratio in
+                                the
+                                distances:
+                                distance(34,3):distance(34,15).
+                            </p>
 
-			</section>
+                            <h4>POST PROCESSING</h4>
+                            <p>
+                                Finally a post processing shader was created for the toon effect to mimic comic books.
+                                The shader first discritize the color pixel value into one of countable values then
+                                apply
+                                edge detection shader on the discritized image.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End of .modal-body -->
 
+                    <br>
+                    <div class="content">
+                        <a class="read-more-button" href="../index.html#projects"><i class="feather-arrow-left"></i>
+                            Back to Projects</a>
+                    </div>
 
-		</div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal Blog area -->
 
-		<!-- Copyright -->
-		<div id="copyright">
-		</div>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/jquery.scrollex.min.js"></script>
-	<script src="../assets/js/jquery.scrolly.min.js"></script>
-	<script src="../assets/js/browser.min.js"></script>
-	<script src="../assets/js/breakpoints.min.js"></script>
-	<script src="../assets/js/util.js"></script>
-	<script src="../assets/js/main.js"></script>
-
+    </main>
+    <!-- Rn footer area Start -->
+    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">
+                © 2022. All rights reserved.
+        </div>
+    </div>
+    <!-- Rn footer area end -->
+    <!-- JS ============================================ -->
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/js/vendor/modernizer.min.js"></script>
+    <script src="../assets/js/vendor/feather.min.js"></script>
+    <script src="../assets/js/vendor/slick.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap.js"></script>
+    <script src="../assets/js/vendor/text-type.js"></script>
+    <script src="../assets/js/vendor/wow.js"></script>
+    <script src="../assets/js/vendor/aos.js"></script>
+    <script src="../assets/js/vendor/particles.js"></script>
+    <script src="../assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- main JS -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

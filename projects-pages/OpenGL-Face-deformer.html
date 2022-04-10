@@ -1,185 +1,206 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>OpenGL face deformation and landmarks extractor</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="../assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+        Projects | OpenGL face deformer
+    </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick-theme.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/aos.css" />
+    <link rel="stylesheet" href="../assets/css/plugins/feature.css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
-<body class="is-preload">
+<body class="template-color-1 spybody" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="150">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <main class="main-page-wrapper">
+        <!-- Modal Blog Body area Start -->
+        <div class="modal fade show" id="kinectMotionCaptureProject" tabindex="-1" role="dialog"
+            style="padding-right: 17px; display: block;" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+                <div class="modal-content">
+                    <div class="content">
+                        <a class="read-more-button" href="../index.html#projects"><i class="feather-arrow-left"></i>
+                            Back to Projects</a>
+                    </div>
+                    <br>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="../projects.html" class="logo">Project</a>
-		</header>
+                    <!-- End of .modal-header -->
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="../projects.html">Back to projects</a></li>
-				<li class="active"><a href="#">Project</a></li>
-			</ul>
+                    <div class="modal-body">
+                        <!-- <img src="assets/images/blog/blog-big-01.jpg" alt="news modal"
+                            class="img-fluid modal-feat-img" /> -->
+                        <div class="news-details">
+                            <span class="date">May, 2020</span>
+                            <h2 class="title">OPENGL FACE DEFORMATION AND LANDMARKS EXTRACTOR</h2>
+                            <p>
+                                Created as a module for NoCap -Markerless motion capture- Graduation project.
+                            </p>
 
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/bassel-mostafa/" class="icon brands fa-linkedin-in"><span
-							class="label">LinkedIn</span></a></li>
-
-				<li><a href="https://github.com/bassel97" class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-
-				<li><a href="https://www.youtube.com/channel/UClCG8xMDzrleJYhlrBLfpqg"
-						class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-
-				<li><a href="https://twitter.com/BasselMks" class="icon brands fa-twitter"><span
-							class="label">Twitter</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Post -->
-			<section class="post">
-				<header class="major">
-					<h1>OpenGL face deformation and landmarks extractor</h1>
-					<p>Created as a module for <b>NoCap</b> <i>-Markerless motion capture-</i> Graduation project.</p>
-				</header>
-
-				<span class="image fit">
-					<iframe class="image fit" width="560" height="680" src="https://www.youtube.com/embed/i6a1tD7TROY"
-						frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</span>
-
-				<h2>Module Description</h2>
-				<p>
-					The module’s purpose is to load a 3D face model with its blendshapes, deform the face using the
-					blendshapes’ values, project this face on a 2D plane and finally return the facial landmarks’
-					position after projection.
-					<br>
-					The module should act as a black box that gets expected facial blend- shapes, identity blendshapes
-					position and rotation then outputs the facial landmarks projected on a 2D plane corresponding to
-					these input values.
-					<br>
-					The module has to be extremely fast to be called more than once in a real time environment.
-				</p>
-
-				<h2>APIs and dependencies</h2>
-				<p>
-					To achieve this fast runtime requirmenet, GPU “Graphics Processing Unit” is
-					favourable over the CPU “Central Processing Unit” in this case due to the parallelized nature of
-					this
-					problem, deforming each vertex using blendshapes values and projecting them can be done in parallel
-					with
-					GPU instead of in series with CPU, also rendering the face for debugging comes with no major
-					additional
-					requirements.
-					<br>
-					<br>
-				</p>
-				<p>
-					<span class="image right"><img src="/images/face-deformer/opengl_logo.png" alt="" /></span>
-					That’s why OpenGL is selected, <b>OpenGL</b> (Open Graphics Library) is a cross-language,
-					cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The
-					API is typically used to interact with a graphics processing unit (GPU), to achieve
-					hardware-accelerated rendering.
-					<br>
-					<br>
-					<span class="image right"><img src="/images/face-deformer/C++Logo.png" alt="" /></span>
-					Calling the OpenGL from C++ is chosen for two purposes, to easily export this module as .dll/.lib to
-					be used by other modules. Also to achieve as much speed optimization as possible.
-					OpenGL API is called through GLFW, GLEW. Mathematical functions are called through GLM. Importing
-					and exporting assets is implemented using Assimp.
-				</p>
-
-				<h2>Sub-modules</h2>
-				<h3>Renderer</h3>
-				<p>
-					<span class="image left"><img src="/images/face-deformer/renderer.jpg" alt="" /></span>
-					This is a straightforward implementation of the OpenGL rendering technique.
-					It starts with importing the face 3D data from file using assimp. It creates the 3D model data
-					structure with given: vertices position and vertices normals. This data structure is sent to the GPU
-					memory to be used.
-					<br>
-					The code that will run on the GPU also called Shaders, is then read from a file and sent to the GPU
-					to process the face data previously sent.
-					Using these data, setting the face position and rotation, and setting an arbitrary location for the
-					light source, a face will be shown on the screen.
-					The light effect comes as an output from the dot product of the vertex normals and the light source
-					position.
-				</p>
-
-				<h3>Blendshapes deformer</h3>
-				<p>
-					<span class="image right"><img src="/images/face-deformer/blendshapes-deformer.jpg" alt="" /></span>
-					While blendshapes as a concept is relatively easy, implementing this part was the most challenging.
-					Blendshapes in the simplest form a list of vectors that are linearly added after multiplying with
-					weights to the original vertex position to get a new shape.
-					<br>
-					The simplest approach was to save the blendshapes of each vertex along with its normals yet this
-					approach won’t work for a large number of blendshapes, right now there are 118 for expressions and
-					more are added for identities, this approach could have worked for a few number of blendshapes.
-					<br>
-					The solution was to create a large structure that holds all the blendshapes of all vertices
-					together, and save with each vertex the index it should look up within this structure. The structure
-					using OpenGL is called a Texture and data read was saved inside one.
-					<br>
-					In the vertex shader program each vertex has access to the whole blendshapes texture -dealt with as
-					array-, uses its saved index to get what values it should add from this blendshapes by multiplying
-					by array of weights with same values across all vertices, the C++ code provides it in runtime.
-				</p>
-
-				<h3>Projection feedback</h3>
-				<p>
-					So far the data is inside our GPU, yet we need to get this data back to be used by other modules
-					(optimizer/regressor), the way to do this is using a transform feedback buffer.
-					A transform Feedback is the process of capturing Primitives generated by the Vertex Processing step,
-					recording data from those primitives into Buffer Objects. This allows one to preserve the
-					post-transform rendering state of an object and resubmit this data multiple times.
-					This feedback buffer will select a property in the shader, in this case we create a property of
-					vector2 for projected values. Using this method will calculate all the vertices projected positions,
-					but we only need the landmarks values.
-					<br>
-					<span class="image fit"><img src="/images/face-deformer/projection-feedback.jpg" alt="" /></span>
-					To get only the landmarks projections values, we need to know their indices in the array, while
-					Assimp changes the indices of vertices while importing, as the 3D model has faces of quads and
-					OpenGL works best with tris.
-					The approach taken was to use blender to export the required vertices as positions not indices and
-					on the C++ side, each vertex is calculating its distance to the required landmarks positions, if the
-					distance is nearly zero then this is a landmarks vertex and saves its index.
-				</p>
-
-				<ul class="actions">
-					<li><a href="../projects.html" class="button">Back to projects</a></li>
-				</ul>
-
-			</section>
+                            <div
+                                style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/i6a1tD7TROY"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                    alt="news modal" class="img-fluid modal-feat-img" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <h4>MODULE DESCRIPTION</h4>
+                            <p>
+                                The module’s purpose is to load a 3D face model with its blendshapes, deform the face
+                                using
+                                the blendshapes’ values, project this face on a 2D plane and finally return the facial
+                                landmarks’ position after projection.<br>
+                                The module should act as a black box that gets expected facial blend- shapes, identity
+                                blendshapes position and rotation then outputs the facial landmarks projected on a 2D
+                                plane
+                                corresponding to these input values.<br>
+                                The module has to be extremely fast to be called more than once in a real time
+                                environment.
+                            </p>
 
 
-		</div>
 
-		<!-- Copyright -->
-		<div id="copyright">
-		</div>
+                            <h4>APIS AND DEPENDENCIES</h4>
+                            <p>To achieve this fast runtime requirmenet, GPU “Graphics Processing Unit” is favourable
+                                over
+                                the CPU “Central Processing Unit” in this case due to the parallelized nature of this
+                                problem, deforming each vertex using blendshapes values and projecting them can be done
+                                in
+                                parallel with GPU instead of in series with CPU, also rendering the face for debugging
+                                comes
+                                with no major additional requirements.</p>
 
-	</div>
+                            <p>That’s why OpenGL is selected, OpenGL (Open Graphics Library) is a cross-language,
+                                cross-platform application programming interface (API) for rendering 2D and 3D vector
+                                graphics. The API is typically used to interact with a graphics processing unit (GPU),
+                                to
+                                achieve hardware-accelerated rendering.</p>
 
-	<!-- Scripts -->
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/jquery.scrollex.min.js"></script>
-	<script src="../assets/js/jquery.scrolly.min.js"></script>
-	<script src="../assets/js/browser.min.js"></script>
-	<script src="../assets/js/breakpoints.min.js"></script>
-	<script src="../assets/js/util.js"></script>
-	<script src="../assets/js/main.js"></script>
+                            <p>Calling the OpenGL from C++ is chosen for two purposes, to easily export this module as
+                                .dll/.lib to be used by other modules. Also to achieve as much speed optimization as
+                                possible. OpenGL API is called through GLFW, GLEW. Mathematical functions are called
+                                through
+                                GLM. Importing and exporting assets is implemented using Assimp.</p>
 
+                            <h3>SUB-MODULES</h3>
+                            <h4>RENDERER</h4>
+                            <p>This is a straightforward implementation of the OpenGL rendering technique. It starts
+                                with
+                                importing the face 3D data from file using assimp. It creates the 3D model data
+                                structure
+                                with given: vertices position and vertices normals. This data structure is sent to the
+                                GPU
+                                memory to be used.</p>
+                            <p>The code that will run on the GPU also called Shaders, is then read from a file and sent
+                                to
+                                the GPU to process the face data previously sent. Using these data, setting the face
+                                position and rotation, and setting an arbitrary location for the light source, a face
+                                will
+                                be shown on the screen. The light effect comes as an output from the dot product of the
+                                vertex normals and the light source position.</p>
+
+                            <h4>BLENDSHAPES DEFORMER</h4>
+                            <p>While blendshapes as a concept is relatively easy, implementing this part was the most
+                                challenging. Blendshapes in the simplest form a list of vectors that are linearly added
+                                after multiplying with weights to the original vertex position to get a new shape.
+                                The simplest approach was to save the blendshapes of each vertex along with its normals
+                                yet
+                                this approach won’t work for a large number of blendshapes, right now there are 118 for
+                                expressions and more are added for identities, this approach could have worked for a few
+                                number of blendshapes.</p>
+                            <p>The solution was to create a large structure that holds all the blendshapes of all
+                                vertices
+                                together, and save with each vertex the index it should look up within this structure.
+                                The
+                                structure using OpenGL is called a Texture and data read was saved inside one.
+                                In the vertex shader program each vertex has access to the whole blendshapes texture
+                                -dealt
+                                with as array-, uses its saved index to get what values it should add from this
+                                blendshapes
+                                by multiplying by array of weights with same values across all vertices, the C++ code
+                                provides it in runtime.</p>
+
+                            <h4>PROJECTION FEEDBACK</h4>
+                            <p>So far the data is inside our GPU, yet we need to get this data back to be used by other
+                                modules (optimizer/regressor), the way to do this is using a transform feedback buffer.
+                                A
+                                transform Feedback is the process of capturing Primitives generated by the Vertex
+                                Processing
+                                step, recording data from those primitives into Buffer Objects. This allows one to
+                                preserve
+                                the post-transform rendering state of an object and resubmit this data multiple times.
+                                This
+                                feedback buffer will select a property in the shader, in this case we create a property
+                                of
+                                vector2 for projected values. Using this method will calculate all the vertices
+                                projected
+                                positions, but we only need the landmarks values.</p>
+
+                            <img src="../assets/images/projects/face-deformer/projection-feedback.jpg" alt="news modal"
+                                class="img-fluid modal-feat-img">
+
+                            <p>To get only the landmarks projections values, we need to know their indices in the array,
+                                while Assimp changes the indices of vertices while importing, as the 3D model has faces
+                                of
+                                quads and OpenGL works best with tris. The approach taken was to use blender to export
+                                the
+                                required vertices as positions not indices and on the C++ side, each vertex is
+                                calculating
+                                its distance to the required landmarks positions, if the distance is nearly zero then
+                                this
+                                is a landmarks vertex and saves its index.</p>
+                        </div>
+                    </div>
+                    <!-- End of .modal-body -->
+
+                    <br>
+                    <div class="content">
+                        <a class="read-more-button" href="../index.html#projects"><i class="feather-arrow-left"></i>
+                            Back to Projects</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Modal Blog area -->
+
+    </main>
+    <!-- Rn footer area Start -->
+    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">
+                © 2022. All rights reserved.
+        </div>
+    </div>
+    <!-- Rn footer area end -->
+    <!-- JS ============================================ -->
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/js/vendor/modernizer.min.js"></script>
+    <script src="../assets/js/vendor/feather.min.js"></script>
+    <script src="../assets/js/vendor/slick.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap.js"></script>
+    <script src="../assets/js/vendor/text-type.js"></script>
+    <script src="../assets/js/vendor/wow.js"></script>
+    <script src="../assets/js/vendor/aos.js"></script>
+    <script src="../assets/js/vendor/particles.js"></script>
+    <script src="../assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- main JS -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

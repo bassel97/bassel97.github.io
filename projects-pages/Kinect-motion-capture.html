@@ -1,216 +1,219 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Project</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="../assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+        Projects | Kinect Motion Capture
+    </title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick-theme.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/aos.css" />
+    <link rel="stylesheet" href="../assets/css/plugins/feature.css" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
-<body class="is-preload">
+<body class="template-color-1 spybody" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="150">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <main class="main-page-wrapper">
+        <!-- Modal Blog Body area Start -->
+        <div class="modal fade show" id="kinectMotionCaptureProject" tabindex="-1" role="dialog"
+            style="padding-right: 17px; display: block;" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+                <div class="modal-content">
+                    <div class="content">
+                        <a class="read-more-button" href="../index.html#projects"><i
+                                class="feather-arrow-left"></i> Back to Projects</a>
+                    </div>
+                    <br>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="#" class="logo">Project</a>
-		</header>
+                    <!-- End of .modal-header -->
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="../projects.html">Back to projects</a></li>
-				<li class="active"><a href="#">Project</a></li>
-			</ul>
+                    <div class="modal-body">
+                        <!-- <img src="assets/images/blog/blog-big-01.jpg" alt="news modal"
+                            class="img-fluid modal-feat-img" /> -->
+                        <div class="news-details">
+                            <span class="date">December, 2021</span>
+                            <h2 class="title">KINECT MOTION CAPTURE</h2>
+                            <p>
+                                In this project, I used the Kinect sensor along with Kinect SDk
+                                and Blender python to capture body motion data and retarget it
+                                to humanoid characters then smoothing the output.
+                            </p>
 
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/bassel-mostafa/" class="icon brands fa-linkedin-in"><span
-							class="label">LinkedIn</span></a></li>
+                            <div
+                                style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/fFYoi9xwbSA"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                    alt="news modal" class="img-fluid modal-feat-img" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <br>
+                            <p style="border-style: solid; white-space: pre;">
+    import bpy
+    import mathutils
 
-				<li><a href="https://github.com/bassel97" class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-
-				<li><a href="https://www.youtube.com/channel/UClCG8xMDzrleJYhlrBLfpqg"
-						class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-
-				<li><a href="https://twitter.com/BasselMks" class="icon brands fa-twitter"><span
-							class="label">Twitter</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Post -->
-			<section class="post">
-				<header class="major">
-					<h1>Kinect motion Capture</h1>
-				</header>
-
-				<span class="image fit">
-						<iframe class="image fit" width="560" height="680" src="https://www.youtube.com/embed/fFYoi9xwbSA" 
-						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-				</span>						
-
-				<p>
-					<span class="image right">
-						<img src="/images/KinectProject/kinectv2.jpg" alt="" />
-					</span>
-					In this project,
-					I used the Kinect sensor along with Kinect SDk and Blender python to capture body motion data and retarget it
-					to humanoid characters then smoothing the output.
-				</p>
-
-				<br>
-				<br>
-				<h2>Blender Python Code:</h2>
-				<pre><code>
-import bpy
-import mathutils
-
-def add_objects(models):
-	for x in range(25):
-		bpy.ops.object.select_all(action='DESELECT')
-		bpy.ops.mesh.primitive_ico_sphere_add(radius=1, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(0.05, 0.05, 0.05))
-		models.append(bpy.context.selected_objects[0])
-		bpy.ops.object.select_all(action='DESELECT')
+    def add_objects(models):
+    for x in range(25):
+    bpy.ops.object.select_all(action='DESELECT')
+    bpy.ops.mesh.primitive_ico_sphere_add(radius=1, enter_editmode=False, align='WORLD',
+    location=(0, 0, 0), scale=(0.05, 0.05, 0.05))
+    models.append(bpy.context.selected_objects[0])
+    bpy.ops.object.select_all(action='DESELECT')
 
 
-def RotateBone(boneName,models,indx0,indx1,frameNo):
-	if bpy.context.object.mode != 'POSE':
-		print( "Bone not selected" )
-		return
-	
-	armature = bpy.context.active_object
-	
-	for bone in armature.data.bones:
-		bone.select = False
-	armature.data.bones[boneName].select = True
-	armature.data.bones.active = armature.data.bones[boneName]
-	
-	v1 = models[indx0].location
-	v2 = models[indx1].location
-	v = v2 - v1
-	v.normalize()
-	
-	vGoal = v + bpy.context.active_pose_bone.head
-	
-	bpy.ops.object.posemode_toggle()
-	bpy.ops.object.empty_add(type='PLAIN_AXES', location= vGoal)
-	target_axis = bpy.context.active_object
-	
-	bpy.ops.object.select_all(action='DESELECT')
-	armature.select_set(True)
-	bpy.context.view_layer.objects.active = armature
-	bpy.ops.object.posemode_toggle()
-	
-	bpy.ops.pose.constraint_add(type='DAMPED_TRACK')
-	bpy.context.object.pose.bones[boneName].constraints["Damped Track"].target = target_axis
-	
-	#bpy.ops.object.delete(use_global=False)
-	#bpy.ops.nla.bake(frame_start=frameNo, frame_end=frameNo, visual_keying=True, clear_constraints=True, bake_types={'POSE'})
+    def RotateBone(boneName,models,indx0,indx1,frameNo):
+    if bpy.context.object.mode != 'POSE':
+    print( "Bone not selected" )
+    return
 
-	bpy.ops.pose.visual_transform_apply()
-	bpy.ops.pose.constraints_clear()
-	bpy.context.object.pose.bones[boneName].keyframe_insert(data_path='rotation_quaternion',frame=frameNo)
+    armature = bpy.context.active_object
 
-	bpy.ops.object.posemode_toggle()
-	bpy.ops.object.select_all(action='DESELECT')
-	target_axis.select_set(True)
-	bpy.ops.object.delete(use_global=False)
-	
-	bpy.context.view_layer.objects.active = armature
-	bpy.ops.object.posemode_toggle()
-	
+    for bone in armature.data.bones:
+    bone.select = False
+    armature.data.bones[boneName].select = True
+    armature.data.bones.active = armature.data.bones[boneName]
 
+    v1 = models[indx0].location
+    v2 = models[indx1].location
+    v = v2 - v1
+    v.normalize()
 
-#Contains the data of the joints
-models = []
-add_objects(models)
+    vGoal = v + bpy.context.active_pose_bone.head
 
-f = open("filename.txt", "r")
+    bpy.ops.object.posemode_toggle()
+    bpy.ops.object.empty_add(type='PLAIN_AXES', location= vGoal)
+    target_axis = bpy.context.active_object
 
-bpy.context.scene.frame_current = 0
-currFrame = 0
+    bpy.ops.object.select_all(action='DESELECT')
+    armature.select_set(True)
+    bpy.context.view_layer.objects.active = armature
+    bpy.ops.object.posemode_toggle()
 
-while (line := f.readline().rstrip()):
-	#print(line)
-	if(line[0] == "#"):
-		if(currFrame > 0):
-			
-			if bpy.context.object.mode != 'POSE':
-				bpy.ops.object.select_all(action='DESELECT')
-				bpy.data.objects['Skin Armature.001'].select_set(True)
-				bpy.context.view_layer.objects.active = bpy.data.objects['Skin Armature.001']
-				#bpy.context.scene.objects.active = bpy.data.objects['Skin Armature.001']
-				bpy.ops.object.posemode_toggle()
-				
-			RotateBone("Bone.05.R",models,8,9,currFrame)
-			RotateBone("Bone.05.L",models,4,5,currFrame)
-			
-			RotateBone("Bone.36.R",models,9,10,currFrame)
-			RotateBone("Bone.36.L",models,5,6,currFrame)
-			
-			#RotateBone("Bone.14.R",models,16,17,currFrame)
-			#RotateBone("Bone.01.R",models,17,18,currFrame)
-			#RotateBone("Bone.14.L",models,12,13,currFrame)
-			#RotateBone("Bone.01.L",models,13,14,currFrame)
-			
-			RotateBone("Bone.10",models,2,3,currFrame)
-			
-			bpy.ops.object.posemode_toggle()
-			
-			
-		bpy.context.scene.frame_current = bpy.context.scene.frame_current + 1
-		currFrame = bpy.context.scene.frame_current
-		print("currFrame:" + str(currFrame))
-	elif(line[0] == "D"):
-		pass
-	else:
-		jointAndNumbers = line.split(" ")
-		
-		joint = int(jointAndNumbers[0])
-		numbers = jointAndNumbers[1].split(",")
-		
-		bpy.ops.object.select_all(action='DESELECT')
-		models[joint].select_set(True)
-		models[joint].location = mathutils.Vector((-float(numbers[0]), float(numbers[2]), float(numbers[1])))        
-		bpy.ops.anim.keyframe_insert_menu(type='Location')
-f.close()
-						</code></pre>
+    bpy.ops.pose.constraint_add(type='DAMPED_TRACK')
+    bpy.context.object.pose.bones[boneName].constraints["Damped Track"].target = target_axis
 
-				<ul class="actions">
-					<li><a href="../projects.html" class="button">Back to projects</a></li>
-				</ul>
+    #bpy.ops.object.delete(use_global=False)
+    #bpy.ops.nla.bake(frame_start=frameNo, frame_end=frameNo, visual_keying=True,
+    clear_constraints=True, bake_types={'POSE'})
 
-			</section>
+    bpy.ops.pose.visual_transform_apply()
+    bpy.ops.pose.constraints_clear()
+    bpy.context.object.pose.bones[boneName].keyframe_insert(data_path='rotation_quaternion',frame=frameNo)
+
+    bpy.ops.object.posemode_toggle()
+    bpy.ops.object.select_all(action='DESELECT')
+    target_axis.select_set(True)
+    bpy.ops.object.delete(use_global=False)
+
+    bpy.context.view_layer.objects.active = armature
+    bpy.ops.object.posemode_toggle()
+
+    #Contains the data of the joints
+    models = []
+    add_objects(models)
+
+    f = open("filename.txt", "r")
+
+    bpy.context.scene.frame_current = 0
+    currFrame = 0
+
+    while (line := f.readline().rstrip()):
+    #print(line)
+    if(line[0] == "#"):
+    if(currFrame > 0):
+
+    if bpy.context.object.mode != 'POSE':
+    bpy.ops.object.select_all(action='DESELECT')
+    bpy.data.objects['Skin Armature.001'].select_set(True)
+    bpy.context.view_layer.objects.active = bpy.data.objects['Skin Armature.001']
+    #bpy.context.scene.objects.active = bpy.data.objects['Skin Armature.001']
+    bpy.ops.object.posemode_toggle()
+
+    RotateBone("Bone.05.R",models,8,9,currFrame)
+    RotateBone("Bone.05.L",models,4,5,currFrame)
+
+    RotateBone("Bone.36.R",models,9,10,currFrame)
+    RotateBone("Bone.36.L",models,5,6,currFrame)
+
+    #RotateBone("Bone.14.R",models,16,17,currFrame)
+    #RotateBone("Bone.01.R",models,17,18,currFrame)
+    #RotateBone("Bone.14.L",models,12,13,currFrame)
+    #RotateBone("Bone.01.L",models,13,14,currFrame)
+
+    RotateBone("Bone.10",models,2,3,currFrame)
+
+    bpy.ops.object.posemode_toggle()
 
 
-		</div>
+    bpy.context.scene.frame_current = bpy.context.scene.frame_current + 1
+    currFrame = bpy.context.scene.frame_current
+    print("currFrame:" + str(currFrame))
+    elif(line[0] == "D"):
+    pass
+    else:
+    jointAndNumbers = line.split(" ")
 
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
+    joint = int(jointAndNumbers[0])
+    numbers = jointAndNumbers[1].split(",")
 
-	</div>
+    bpy.ops.object.select_all(action='DESELECT')
+    models[joint].select_set(True)
+    models[joint].location = mathutils.Vector((-float(numbers[0]), float(numbers[2]),
+    float(numbers[1])))
+    bpy.ops.anim.keyframe_insert_menu(type='Location')
+    f.close()
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End of .modal-body -->
 
-	<!-- Scripts -->
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/jquery.scrollex.min.js"></script>
-	<script src="../assets/js/jquery.scrolly.min.js"></script>
-	<script src="../assets/js/browser.min.js"></script>
-	<script src="../assets/js/breakpoints.min.js"></script>
-	<script src="../assets/js/util.js"></script>
-	<script src="../assets/js/main.js"></script>
+                    <br>
+                    <div class="content">
+                        <a class="read-more-button" href="../index.html#projects"><i
+                                class="feather-arrow-left"></i> Back to Projects</a>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        <!-- End Modal Blog area -->
+
+    </main>
+    <!-- Rn footer area Start -->
+    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">
+                © 2022. All rights reserved.
+        </div>
+    </div>
+    <!-- Rn footer area end -->
+    <!-- JS ============================================ -->
+    <script src="../assets/js/vendor/jquery.js"></script>
+    <script src="../assets/js/vendor/modernizer.min.js"></script>
+    <script src="../assets/js/vendor/feather.min.js"></script>
+    <script src="../assets/js/vendor/slick.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap.js"></script>
+    <script src="../assets/js/vendor/text-type.js"></script>
+    <script src="../assets/js/vendor/wow.js"></script>
+    <script src="../assets/js/vendor/aos.js"></script>
+    <script src="../assets/js/vendor/particles.js"></script>
+    <script src="../assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- main JS -->
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
